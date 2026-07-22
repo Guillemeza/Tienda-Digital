@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tituloIndex{
+    color: rgb(182, 140, 224);
+}
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+.header-img{
+    width: 90px;
+    height: 90px;
+    object-fit:scale-down;
+    display: block;
+}
+
+.indexHeader{
+    position: sticky;
+    top: 0%;
+    background-color: rgb(251, 161, 192);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-size: cover;
+    min-height: 10vh;
+    padding: 15px 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+a{
+    text-decoration:none;
+    color:black;
+}
+
+main{
+    min-height: 100vh;
+    background-color: rgb(255, 231, 200);
+    padding: 25px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    gap: 50px;
+}
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3rem;
+    justify-items: center;
+}
+
+/*.item{
+    background-color: beige;
+    padding: 1rem 2rem;
+    text-align: center;
+}*/
+
+article{
+    width:300px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgb(0 0 0 / .15);
+}
+
+.productos{
+    width: 250px;
+    height: auto;
+    border-radius: 7px;
+}
+
+footer{
+    padding:20px;
+    background-color: rgb(251, 185, 196);
+}
+
+.wa{
+    height: 7vh;
+    width: 7vh;
+    background-color: green;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
