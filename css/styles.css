@@ -3,25 +3,69 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.tituloIndex{
-    color: rgb(182, 140, 224);
-}
 *{
     font-family: "Poppins", sans-serif;
 }
+ul{
+    list-style: none;
+    background-color:#5f9ea0;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+/*    MENU    */
+.listaPrincipal{
+    display: flex;
+}
 
-.header-img{
-    width: 90px;
-    height: 90px;
-    object-fit:scale-down;
+.listaPrincipal li{
+    position: relative;
+}
+.listaPrincipal ul{
+    position: absolute;
+    min-width: 180px;
+    display: none;
+}
+
+.listaPrincipal > li > ul{
+    top: 100%;
+    left: 0;
+}
+.listaPrincipal a{
+    display: flex;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.listaPrincipal li a:hover{
+    background-color:beige;
+}
+.listaPrincipal li:hover > ul {
     display: block;
 }
 
+.tituloIndex{
+    color: rgb(77, 121, 129); /* versión más oscura del verde-azulado del header */
+    font-size: 2.2rem; /* si ahora tiene menos, esto lo agranda */
+}
+/*   IMAGEN DEL HEADER    */
+.header-img{
+    width: 90px;
+    height: 90px;
+    object-fit:cover;
+    display: block;
+    border-radius: 50px;
+}
+/*   INDEX HEADER    */
+.indexHeader h1{
+    color: #ffffff;
+    font-size: 2.9rem;
+}
 .indexHeader{
     position: sticky;
     top: 0%;
-    background-color: rgb(251, 161, 192);
+    background-color:#5f9ea0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -31,42 +75,39 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
-ul{
+.titulo-seccion{
+    font-size: 1.9rem;
+    text-align: center;
+    margin: 40px 0 25px;
+    color: rgb(58, 94, 100);
+}
+.beneficios{
     display: flex;
-    list-style: none;
+    justify-content: center;
     gap: 30px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: rgb(58, 94, 100);
+    flex-wrap: wrap;
 }
-
-a{
-    text-decoration:none;
-    color:black;
-}
-
+/*    MAIN    */ 
 main{
     min-height: 100vh;
-    background-color: rgb(255, 231, 200);
+    background-color: #f8ebdb;
     padding: 25px 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: justify;
-    gap: 50px;
+    gap: 25px;
 }
-
+/*    PRODUCTOS    */
 .contenedor-productos{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 3rem;
     justify-items: center;
 }
-
-/*.item{
-    background-color: beige;
-    padding: 1rem 2rem;
-    text-align: center;
-}*/
-
 article{
     width:300px;
     background:white;
@@ -75,18 +116,60 @@ article{
     text-align:center;
     box-shadow:0 5px 15px rgb(0 0 0 / .15);
 }
-
 .productos{
     width: 250px;
     height: auto;
     border-radius: 7px;
 }
-
+.precio-efectivo{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #356e70;
+}
+.precio-transferencia{
+    font-size: 0.8rem;
+    color: #777;
+}
+/*    FOOTER    */
 footer{
-    padding:20px;
-    background-color: rgb(251, 185, 196);
+    padding:25px 200px;
+    background-color:#5f9ea0;
+    color: white;
+}
+.footer-contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
+.footer-titulo{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.footer-copy{
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.footer-redes{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-redes a{
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-redes a:hover{
+    text-decoration: underline;
+}
 .wa{
     height: 7vh;
     width: 7vh;

@@ -15,74 +15,78 @@
        
         <h1>GM Importaciones</h1>
         <nav>
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./pages/productos.html">Nuestros productos</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
+            <ul class="listaPrincipal">
+                <li>
+                    <a href="./index.html">Inicio</a>
+                    <ul>
+                        <li><a href="./pages/productos.html">Nuestros productos</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="./pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </li>              
             </ul>
         </nav>
+
     </header> <!-- Encabezado -->
     
     <main>
 
         <h2 class="tituloIndex">Productos Importados para tu hogar y Tecnología</h2>
+        <p>Descubrí electrodomésticos, audio y tecnología de las mejores marcas, con envíos a todo el país.</p>
 
-        <p>Descubrí celulares, cafeteras, estufas y productos seleccionados de las mejores marcas, con envíos a todo el país.</p>
-   
-        <h2>Nuestros Productos</h2>
+        <div class="beneficios">
+            <span>✓ Productos originales</span>
+            <span>✓ Envíos a todo el país</span>
+            <span>✓ Transferencia o efectivo</span>
+        </div>
+        <h2 class="titulo-seccion">Nuestros Productos</h2>
 
         <section class="contenedor-productos">
 
             <article>
                 <img class="productos" src="./img/pavaElectricaAcero.jpeg" alt="Pava electrica de acero inoxidable">
                 <h4>JARRA ELECTRICA ACERO INOX CORTE MATE 1.8LTS, 1500 W</h4>
-                <p>$14.000</p>
-                <p>$14.700 precio con transferencia o deposito</p>
+                <p class="precio-efectivo">$14.000</p>
+                <p class="precio-transferencia">$14.700 precio con transferencia o deposito</p>
             </article>
 
             <article>
                 <img class= "productos" src="./img/aspiradoraBlack.jpeg" alt="Aspiradora Black">
                 <h4>ASPIRADORA BLACK+DECKER 20L SECO / HÚMEDOW</h4>
-                <p>$95.000</p>
-                <p>$99.750 precio con transferencia o deposito</p>
+                <p class="precio-efectivo">$95.000</p>
+                <p class="precio-transferencia">$99.750 precio con transferencia o deposito</p>
             </article>
 
             <article>
                 <img class= "productos" src="./img/parlanteKen.jpeg" alt="Parlante Portatil">
                 <h4>Parlante portátil Ken Brown Boom 10</h4>
-                <p>$295.000</p>
-                <p>$309.750 precio con transferencia o deposito</p>
+                <p class="precio-efectivo">$295.000</p>
+                <p class="precio-transferencia">$309.750 precio con transferencia o deposito</p>
             </article>
 
             <article>
                 <img class= "productos" src="./img/lavarropasTcl.jpeg" alt="Lavarropas TCL">
                 <h4>Lavarropas TCL Automático 6,5kg</h4>
-                <p>$420.000</p>
-                <p>$441.000 precio con transferencia o deposito</p>
+                <p class="precio-efectivo">$420.000</p>
+                <p class="precio-transferencia">$441.000 precio con transferencia o deposito</p>
             </article>
         </section>
     </main>
 
     <footer>
-        <h2>Derechos reservados</h2>
-        <h2>2026 GM Importaciones</h2>
-        <h2>Buenos Aires, Argentina</h2>
+        <div class="footer-contenido">
+            <div class="footer-info">
+                <p class="footer-titulo">GM Importaciones</p>
+                <p>Buenos Aires, Argentina</p>
+                <p class="footer-copy">© 2026 Todos los derechos reservados</p>
+            </div>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">WhatsApp</a>
-                </li>
-                <li>
-                    <a href="#">Instagram</a>
-                </li>
-                <li class="wa">
-                    <a href="#"></a>
-                </li>
-            </ul>
-        </nav>
-    </footer>
+            <div class="footer-redes">
+                <a href="https://wa.me/54911XXXXXXXX" target="_blank">WhatsApp</a>
+                <a href="https://instagram.com/tu_usuario" target="_blank">Instagram</a>
+            </div>
+        </div>
+</footer>
 
 </body>
 </html>
