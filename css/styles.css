@@ -245,6 +245,45 @@ footer{
 
 /*    CELULAR: desde 300px hasta 560px    */
 @media (min-width: 300px) and (max-width: 560px) {
+    .indexHeader{
+        flex-direction: column; /* logo+título arriba, nav abajo */
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .listaPrincipal{
+        flex-direction: row; /* los links en fila, uno al lado del otro */
+        justify-content: center;
+        flex-wrap: wrap; /* si no entran todos en una línea, pasan a la siguiente */
+        width: 100%;
+        gap: 5px;
+    }
+
+    .listaPrincipal li{
+        width: auto; /* que cada link ocupe solo su ancho de texto, no el 100% */
+    }
+
+    .listaPrincipal > li > a{
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .listaPrincipal ul{
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: static;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .listaPrincipal a{
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
     main{
         padding: 20px 15px;
     }
