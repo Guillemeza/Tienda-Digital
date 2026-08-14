@@ -1,0 +1,118 @@
+@use "../utilities/variables" as v;
+
+header{
+    h1,h2{
+        color: v.$colo
+    }
+}
+
+.indexHeader{
+    position: sticky;
+    top: 0%;
+    background-color: $color-principal;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-size: cover;
+    min-height: 10vh;
+    padding: 15px 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    h1{
+        color: $color-blanco;
+        font-size: 2.9rem;
+    }
+
+    @include tablet{
+        padding: 10px 20px;
+        flex-wrap: wrap;
+
+        h1{ font-size: 1.3rem; }
+    }
+
+    @include mobile{
+        flex-direction: column;
+        padding: 15px 10px;
+        gap: 10px;
+        justify-content: space-between;
+
+        h1{ font-size: 1.2rem; }
+    }
+}
+
+.header-img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    display: block;
+    border-radius: 50px;
+
+    @include mobile{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* MENU */
+.listaPrincipal{
+    display: flex;
+
+    li{
+        position: relative;
+    }
+
+    ul{
+        position: absolute;
+        min-width: 180px;
+        display: none;
+    }
+
+    > li > ul{
+        top: 100%;
+        left: 0;
+    }
+
+    a{
+        display: flex;
+        padding: 15px;
+        white-space: nowrap;
+    }
+
+    li a:hover{
+        background-color: beige;
+    }
+
+    li:hover > ul{
+        display: block;
+    }
+
+    @include mobile{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 5px;
+
+        > li > a{
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+        }
+
+        ul{
+            display: flex !important;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: static;
+            width: 100%;
+            gap: 5px;
+        }
+
+        a{
+            padding: 8px 12px;
+            font-size: 0.9rem;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+main{
+    min-height: 100vh;
+    background-color: $color-fondo;
+    padding: 25px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    gap: 25px;
+
+    @include desktop-chico{ padding: 25px 40px; }
+    @include tablet{ flex-direction: column; padding: 25px 20px; }
+    @include mobile{ padding: 20px 15px; }
+}
+
+.tituloIndex{
+    color: rgb(77, 121, 129);
+    font-size: 2.2rem;
+
+    @include mobile{ font-size: 1.4rem; }
+}
+
+.titulo-seccion{
+    font-size: 1.9rem;
+    text-align: center;
+    margin: 40px 0 25px;
+    color: $color-texto-oscuro;
+}
+
+.beneficios{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: $color-texto-oscuro;
+    flex-wrap: wrap;
+}
+
+.introProductos{
+    @include tablet{ text-align: center; }
+    @include mobile{ text-align: center; }
+}

@@ -1,0 +1,19 @@
+@mixin flex($dir, $fw, $jc, $ai){
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: $fw;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin desktop-chico {
+    @media (min-width: 969px) and (max-width: 1400px) { @content; }
+}
+
+@mixin tablet {
+    @media (min-width: 561px) and (max-width: 968px) { @content; }
+}
+
+@mixin mobile {
+    @media (min-width: 300px) and (max-width: 560px) { @content; }
+}
