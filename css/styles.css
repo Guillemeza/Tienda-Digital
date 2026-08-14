@@ -104,6 +104,16 @@ a {
   flex-wrap: wrap;
 }
 
+.bene {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: rgb(39, 63, 68);
+  flex-wrap: wrap;
+}
+
 /*    MAIN    */
 main {
   min-height: 100vh;
@@ -151,6 +161,12 @@ article {
   color: #777;
 }
 
+.parrafo{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000000;
+}
+
 /*    FOOTER    */
 footer {
   padding: 25px 200px;
@@ -196,12 +212,12 @@ footer {
 .wa {
   height: 7vh;
   width: 7vh;
-  background-color: green;
+ background-color: #ffffff;
   border-radius: 50px;
   position: fixed;
   bottom: 50px;
   right: 50px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 20px #0000004d;
 }
 
 /*    Media Queris    */
