@@ -1,3 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
 
+ul {
+  list-style: none;
+  background-color: #5f9ea0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+header h1, header h2 {
+  color: beige;
+}
+
+.indexHeader {
+  position: sticky;
+  top: 0%;
+  background-color: #5f9ea0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-size: cover;
+  min-height: 10vh;
+  padding: 15px 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.indexHeader h1 {
+  color: #fff;
+  font-size: 2.9rem;
+}
+@media (min-width: 561px) and (max-width: 968px) {
+  .indexHeader {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  .indexHeader h1 {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 300px) and (max-width: 560px) {
+  .indexHeader {
+    flex-direction: column;
+    padding: 15px 10px;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .indexHeader h1 {
+    font-size: 1.2rem;
+  }
+}
+
+.header-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+  border-radius: 50px;
+}
+@media (min-width: 300px) and (max-width: 560px) {
+  .header-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* MENU */
+.listaPrincipal {
+  display: flex;
+}
+.listaPrincipal li {
+  position: relative;
+}
+.listaPrincipal ul {
+  position: absolute;
+  min-width: 180px;
+  display: none;
+}
+.listaPrincipal > li > ul {
+  top: 100%;
+  left: 0;
+}
+.listaPrincipal a {
+  display: flex;
+  padding: 15px;
+  white-space: nowrap;
+}
+.listaPrincipal li a:hover {
+  background-color: beige;
+}
+.listaPrincipal li:hover > ul {
+  display: block;
+}
+@media (min-width: 300px) and (max-width: 560px) {
+  .listaPrincipal {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5px;
+  }
+  .listaPrincipal > li > a {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  .listaPrincipal ul {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: static;
+    width: 100%;
+    gap: 5px;
+  }
+  .listaPrincipal a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes vibrate {
+  10% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+footer {
+  padding: 25px 200px;
+  background-color: #5f9ea0;
+  color: #ffffff;
+}
+@media (min-width: 561px) and (max-width: 968px) {
+  footer {
+    padding: 30px 30px;
+  }
+}
+@media (min-width: 300px) and (max-width: 560px) {
+  footer {
+    padding: 25px 15px;
+  }
+}
+
+.footer-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (min-width: 561px) and (max-width: 968px) {
+  .footer-contenido {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+@media (min-width: 300px) and (max-width: 560px) {
+  .footer-contenido {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+.footer-titulo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 20px;
+}
+.footer-redes a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.footer-redes a:hover {
+  text-decoration: underline;
+}
+
+.wa {
+  height: 7vh;
+  width: 7vh;
+  background-color: #ffffff;
+  border-radius: 50px;
+  padding: 8px;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3019607843);
+  animation: vibrate 2s infinite;
+}
+.wa:hover {
+  animation: vibrate 2s infinite;
+}
+
+main {
+  min-height: 100vh;
+  background-color: #f8ebdb;
+  padding: 25px 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  gap: 25px;
+}
+@media (min-width: 969px) and (max-width: 1400px) {
+  main {
+    padding: 25px 40px;
+  }
+}
+@media (min-width: 561px) and (max-width: 968px) {
+  main {
+    flex-direction: column;
+    padding: 25px 20px;
+  }
+}
+@media (min-width: 300px) and (max-width: 560px) {
+  main {
+    padding: 20px 15px;
+  }
+}
+
+.tituloIndex {
+  color: rgb(77, 121, 129);
+  font-size: 2.2rem;
+}
+@media (min-width: 300px) and (max-width: 560px) {
+  .tituloIndex {
+    font-size: 1.4rem;
+  }
+}
+
+.titulo-seccion {
+  font-size: 1.9rem;
+  text-align: center;
+  margin: 40px 0 25px;
+  color: rgb(58, 94, 100);
+}
+
+.beneficios {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: rgb(58, 94, 100);
+  flex-wrap: wrap;
+}
+
+@media (min-width: 561px) and (max-width: 968px) {
+  .introProductos {
+    text-align: center;
+  }
+}
+@media (min-width: 300px) and (max-width: 560px) {
+  .introProductos {
+    text-align: center;
+  }
+}
+
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  justify-items: center;
+}
+@media (min-width: 969px) and (max-width: 1400px) {
+  .contenedor-productos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+}
+@media (min-width: 561px) and (max-width: 968px) {
+  .contenedor-productos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+@media (min-width: 300px) and (max-width: 560px) {
+  .contenedor-productos {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+article {
+  width: 100%;
+  max-width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.productos {
+  width: 250px;
+  height: auto;
+  border-radius: 7px;
+}
+
+.precio-efectivo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #356e70;
+}
+
+.precio-transferencia {
+  font-size: 0.8rem;
+  color: #777;
+}
 
 /*# sourceMappingURL=style.css.map */

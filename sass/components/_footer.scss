@@ -1,12 +1,14 @@
 @use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+@use "../utilities/animation.scss" as a;
 
 footer{
     padding: 25px 200px;
-    background-color: $color-principal;
-    color: $color-blanco;
+    background-color: v.$color-principal;
+    color: #ffffff;
 
-    @include tablet{ padding: 30px 30px; }
-    @include mobile{ padding: 25px 15px; }
+    @include m.tablet{ padding: 30px 30px; }
+    @include m.mobile{ padding: 25px 15px; }
 }
 
 .footer-contenido{
@@ -16,13 +18,13 @@ footer{
     flex-wrap: wrap;
     gap: 20px;
 
-    @include tablet{
+    @include m.tablet{
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
     }
 
-    @include mobile{
+    @include m.mobile{
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
@@ -45,7 +47,7 @@ footer{
     gap: 20px;
 
     a{
-        color: $color-blanco;
+        color: v.$color-blanco;
         font-weight: 600;
         text-decoration: none;
 
@@ -58,10 +60,17 @@ footer{
 .wa{
     height: 7vh;
     width: 7vh;
-    background-color: green;
+    background-color: #ffffff;
     border-radius: 50px;
+    padding: 8px;
+    box-sizing: border-box;
     position: fixed;
     bottom: 50px;
     right: 50px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    box-shadow: 0 5px 20px #0000004d;
+    animation: vibrate 2s infinite;
+    &:hover{
+        animation: vibrate 2s infinite;
+    }
 }
+

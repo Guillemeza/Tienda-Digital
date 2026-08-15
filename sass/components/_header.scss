@@ -1,15 +1,16 @@
 @use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
 
 header{
     h1,h2{
-        color: v.$colo
+        color: beige;
     }
 }
 
 .indexHeader{
     position: sticky;
     top: 0%;
-    background-color: $color-principal;
+    background-color: v.$color-principal;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -20,18 +21,18 @@ header{
     background-attachment: fixed;
 
     h1{
-        color: $color-blanco;
+        color: v.$color-blanco;
         font-size: 2.9rem;
     }
 
-    @include tablet{
+    @include m.tablet{
         padding: 10px 20px;
         flex-wrap: wrap;
 
         h1{ font-size: 1.3rem; }
     }
 
-    @include mobile{
+    @include m.mobile{
         flex-direction: column;
         padding: 15px 10px;
         gap: 10px;
@@ -48,7 +49,7 @@ header{
     display: block;
     border-radius: 50px;
 
-    @include mobile{
+    @include m.mobile{
         width: 60px;
         height: 60px;
     }
@@ -87,7 +88,7 @@ header{
         display: block;
     }
 
-    @include mobile{
+    @include m.mobile{
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
