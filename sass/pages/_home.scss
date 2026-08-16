@@ -4,7 +4,7 @@
 main{
     min-height: 100vh;
     background-color: v.$color-fondo;
-    padding: 25px 200px;
+    padding: 25px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,3 +44,41 @@ main{
     @include m.tablet{ text-align: center; }
     @include m.mobile{ text-align: center; }
 }
+
+.faq-contenedor{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 2 columnas */
+    gap: 15px;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    @include m.desktop-chico{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include m.tablet{
+        grid-template-columns: repeat(2, 1fr); /* se mantiene en 2, o bajalo a 1 si preferís */
+    }
+
+    @include m.mobile{
+        grid-template-columns: 1fr; /* una sola columna en celular */
+    }
+}    
+
+.faq-item{
+    background: white;
+    padding: 20px 25px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px #00000026;
+    }
+
+    h3{
+        color: v.$color-texto-oscuro;
+        margin-bottom: 8px;
+    }
+}
+
