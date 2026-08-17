@@ -1,6 +1,6 @@
 @use "../utilities/variables" as v;
 @use "../utilities/mixins" as m;
-@use "../utilities/animation.scss" as a;
+@use "../utilities/animation.scss";
 
 footer{
     padding: 25px 200px;

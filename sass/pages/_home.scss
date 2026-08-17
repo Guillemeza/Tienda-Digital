@@ -1,5 +1,6 @@
 @use "../utilities/variables" as v;
 @use "../utilities/mixins" as m;
+@use "../utilities/animation" as a;
 
 main{
     min-height: 100vh;
@@ -16,18 +17,30 @@ main{
     @include m.mobile{ padding: 20px 15px; }
 }
 
+%titulo-base{
+    text-align: center;
+    font-weight: bold;
+    color: v.$color-texto-oscuro; // un solo color para ambos
+}
 .tituloIndex{
-    color: rgb(77, 121, 129);
+    @extend %titulo-base;
     font-size: 2.2rem;
+    animation: fadeInUp 0.8s ease forwards;
 
     @include m.mobile{ font-size: 1.4rem; }
 }
 
+.descripcion-hero{
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
 .titulo-seccion{
+    @extend %titulo-base;
     font-size: 1.9rem;
     text-align: center;
     margin: 40px 0 25px;
-    color: v.$color-texto-oscuro;
 }
 
 .beneficios{
@@ -38,6 +51,9 @@ main{
     font-size: 0.9rem;
     color: v.$color-texto-oscuro;
     flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
 }
 
 .introProductos{
