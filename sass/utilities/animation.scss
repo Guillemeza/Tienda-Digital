@@ -1,8 +1,17 @@
 @keyframes vibrate {
     10%{
-        transform: translateX(50px);
+        transform: translateX(10px);
     }
-    100%{
-        transform: translateX(0px);
+    30%{
+        transform: translateX(-10);
+    }
+    50%{
+        transform: translateX(10);
+    }
+    70%{
+        transform: translateX(-10);
+    }
+    90%{
+        transform: translateX(10);
     }
 }

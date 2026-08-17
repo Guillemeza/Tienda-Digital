@@ -68,9 +68,9 @@ footer{
     bottom: 50px;
     right: 50px;
     box-shadow: 0 5px 20px #0000004d;
-    animation: vibrate 2s infinite;
-    &:hover{
-        animation: vibrate 2s infinite;
-    }
+    animation: vibrate 2s infinite ease-out;
+    // &:hover{
+        // animation: vibrate 2s infinite;
+    //}
 }
 
