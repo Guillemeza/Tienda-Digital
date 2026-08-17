@@ -145,6 +145,16 @@ header h1, header h2 {
     transform: translateX(10);
   }
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 footer {
   padding: 25px 200px;
   background-color: #5f9ea0;
@@ -248,9 +258,15 @@ main {
   }
 }
 
+.titulo-seccion, .tituloIndex {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(58, 94, 100);
+}
+
 .tituloIndex {
-  color: rgb(77, 121, 129);
   font-size: 2.2rem;
+  animation: fadeInUp 0.8s ease forwards;
 }
 @media (min-width: 300px) and (max-width: 560px) {
   .tituloIndex {
@@ -258,11 +274,16 @@ main {
   }
 }
 
+.descripcion-hero {
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
 .titulo-seccion {
   font-size: 1.9rem;
   text-align: center;
   margin: 40px 0 25px;
-  color: rgb(58, 94, 100);
 }
 
 .beneficios {
@@ -273,6 +294,9 @@ main {
   font-size: 0.9rem;
   color: rgb(58, 94, 100);
   flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
 }
 
 @media (min-width: 561px) and (max-width: 968px) {
@@ -356,7 +380,12 @@ article {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1490196078);
+  transition: all 0.3s ease;
+}
+article:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .productos {
