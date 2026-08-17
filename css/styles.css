@@ -130,10 +130,19 @@ header h1, header h2 {
 
 @keyframes vibrate {
   10% {
-    transform: translateX(50px);
+    transform: translateX(10px);
   }
-  100% {
-    transform: translateX(0px);
+  30% {
+    transform: translateX(-10);
+  }
+  50% {
+    transform: translateX(10);
+  }
+  70% {
+    transform: translateX(-10);
+  }
+  90% {
+    transform: translateX(10);
   }
 }
 footer {
@@ -209,10 +218,7 @@ footer {
   bottom: 50px;
   right: 50px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3019607843);
-  animation: vibrate 2s infinite;
-}
-.wa:hover {
-  animation: vibrate 2s infinite;
+  animation: vibrate 2s infinite ease-out;
 }
 
 main {
